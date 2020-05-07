@@ -22,9 +22,24 @@ namespace lab5
         public StatusUnum status { get; set; }
         public String errorMessage { get; set; }
 
+        private String[] properties;
+
+        public String this[int i]
+        {
+            get
+            {
+                return properties[i];
+            }
+            set
+            {
+                properties[i] = value;
+            }
+        }
+
         public Article()
         {
             id = "1";
+            properties = new String[10];
         }
     }
 }
